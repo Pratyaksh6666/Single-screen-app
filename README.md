@@ -1,1 +1,1 @@
-# Single-screen-app
+# Score-keeper-udacity
