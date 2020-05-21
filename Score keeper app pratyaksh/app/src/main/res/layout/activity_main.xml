@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/black">
+
+    <RelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+
+        <TextView
+            android:id="@+id/cricket_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:fontFamily="@font/caligraf_black"
+            android:textColor="#FFFFFF"
+            android:text="CRICKET BUZZ SCORE CARD"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+        <LinearLayout
+            android:layout_below="@id/cricket_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_centerVertical="true"
+            android:padding="16dp"
+            tools:context=".MainActivity"
+            android:id="@+id/linear_layout">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/team_a_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/aladin"
+                    android:gravity="center_horizontal"
+                    android:padding="10dp"
+                    android:textSize="25sp"
+                    android:text="TEAM INDIA"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/team_a_score_text_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:padding="10dp"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"
+                    android:text="SCORE: 0"/>
+
+                <TextView
+                    android:id="@+id/team_a_out_text_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:padding="10dp"
+                    android:textSize="16sp"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:text="OUT: 0/10"/>
+                <TextView
+                    android:id="@+id/team_a_over_text_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:padding="10dp"
+                    android:textSize="16sp"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:text="OVER: 0/50"/>
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="+6 runs"
+                    android:layout_margin="10dp"
+                    android:onClick="sixRunIncrementTeamA"
+                    android:id="@+id/six_point_button"/>
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="+4 runs"
+                    android:layout_margin="10dp"
+                    android:onClick="fourRunIncrementTeamA"
+                    android:id="@+id/four_point_button"/>
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="+1 run"
+                    android:layout_margin="10dp"
+                    android:onClick="oneRunIncrementTeamA"
+                    android:id="@+id/one_point_button"/>
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="+1 out"
+                    android:layout_margin="10dp"
+                    android:onClick="outIncrementTeamA"
+                    android:id="@+id/out_point_button"/>
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="+1 over"
+                    android:layout_margin="10dp"
+                    android:onClick="overIncrementTeamA"
+                    android:id="@+id/over_point_button"/>
+            </LinearLayout>
+            <View
+                android:layout_width="2dp"
+                android:layout_height="500dp"
+                android:layout_gravity="center"
+                android:background="@android:color/holo_red_dark" />
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/team_b_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/aladin"
+                    android:gravity="center_horizontal"
+                    android:padding="10dp"
+                    android:textSize="25sp"
+                    android:text="TEAM PAKISTAN"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/team_b_score_text_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:padding="10dp"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"
+                    android:text="SCORE: 0"/>
+
+                <TextView
+                    android:id="@+id/team_b_out_text_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:padding="10dp"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"
+                    android:text="OUT: 0/10"/>
+
+                <TextView
+                    android:id="@+id/team_b_over_text_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:padding="10dp"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="#FFFFFF"
+                    android:text="OVER: 0/50"/>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="+6 runs"
+                    android:layout_margin="10dp"
+                    android:onClick="sixRunIncrementTeamB"
+                    android:id="@+id/six_point_button_team_b"/>
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="+4 runs"
+                    android:layout_margin="10dp"
+                    android:onClick="fourRunIncrementTeamB"
+                    android:id="@+id/four_point_button_team_b"/>
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="+1 run"
+                    android:layout_margin="10dp"
+                    android:onClick="oneRunIncrementTeamB"
+                    android:id="@+id/one_point_button_team_b"/>
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="+1 OUT"
+                    android:layout_margin="10dp"
+                    android:onClick="outIncrementTeamB"
+                    android:id="@+id/out_point_button_team_b"/>
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="+1 OVER"
+                    android:layout_margin="10dp"
+                    android:onClick="overIncrementTeamB"
+                    android:id="@+id/over_point_button_team_b"/>
+
+            </LinearLayout>
+        </LinearLayout>
+        <Button
+            android:id="@+id/reset_button"
+
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/linear_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="resetButton"
+            android:text="CUT IT OUT"/>
+    </RelativeLayout>
+</ScrollView>
